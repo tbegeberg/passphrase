@@ -58,23 +58,23 @@ struct ContentView: View {
                     Text("\(Int(entropyBits(forWordCount: Int(wordCount), fromList: generator.words.count))) bits of entropy").bold()
                     Text("\(entropyDescription(bits: Int(entropyBits(forWordCount: Int(wordCount), fromList: generator.words.count))))")
 
-                    if generating {
-                        ProgressView().id(UUID()).frame(maxWidth: .infinity, alignment: .center)
-                    } else {
-                        Button(passwords.isEmpty ? "Generate" : "Clear") {
-                            guard generating == false else {
-                                return
-                            }
-                            if passwords.isEmpty {
-                                generate()
-                            } else {
-                                withAnimation {
-                                    passwords.removeAll()
-                                }
+                    Button {
+                        if passwords.isEmpty {
+                            generate()
+                        } else {
+                            withAnimation {
+                                passwords.removeAll()
                             }
                         }
-                        .frame(maxWidth: .infinity, alignment: .center)
+                    } label: {
+                        if generating {
+                            ProgressView().id(UUID()).frame(maxWidth: .infinity, alignment: .center)
+                        } else {
+                            Text(passwords.isEmpty ? "Generate" : "Clear")
+                        }
                     }
+                    .disabled(generating)
+                    .frame(maxWidth: .infinity, alignment: .center)
                 }
                 
                 if passwords.isEmpty == false {
