@@ -44,10 +44,11 @@ struct ContentView: View {
                 Section {
                     Slider(value: $wordCount.animation(), in: passwordLengthRange, step: passwordLengthStep) {
                     } minimumValueLabel: {
-                        Text("Weaker").font(.caption)
+                        Text("Weaker")
                     } maximumValueLabel: {
-                        Text("Stronger").font(.caption)
+                        Text("Stronger")
                     }
+                    .font(.caption)
                     .onChange(of: wordCount) { oldValue, newValue in
                         withAnimation {
                             passwords.removeAll()
