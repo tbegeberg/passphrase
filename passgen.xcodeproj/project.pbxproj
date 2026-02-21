@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,16 @@
 		C6E381942F2DD17800680BF7 /* Password.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E381932F2DD17800680BF7 /* Password.swift */; };
 		C6E3819E2F2DE3A200680BF7 /* PasswordGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E3819D2F2DE39E00680BF7 /* PasswordGenerator.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E89CF2332F49E37300DA5FF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C68ABCDC2B56542D002AE876 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C68ABCE32B56542D002AE876;
+			remoteInfo = passgen;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C61DA5002F28B223009E29A6 /* PasswordScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordScore.swift; sourceTree = "<group>"; };
@@ -38,10 +48,22 @@
 		C6E3819F2F2DF23B00680BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C6E381A02F2E41DE00680BF7 /* audit.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = audit.sh; sourceTree = "<group>"; };
 		C6E381C32F2E993000680BF7 /* PRIVACY.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PRIVACY.MD; sourceTree = "<group>"; };
+		E89CF22F2F49E37300DA5FF9 /* passgenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = passgenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E89CF2302F49E37300DA5FF9 /* passgenTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = passgenTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C68ABCE12B56542D002AE876 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E89CF22C2F49E37300DA5FF9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -59,6 +81,7 @@
 				C6E3819C2F2DE16800680BF7 /* README.md */,
 				C6E3819B2F2DE16800680BF7 /* LICENSE.md */,
 				C68ABCE62B56542D002AE876 /* passgen */,
+				E89CF2302F49E37300DA5FF9 /* passgenTests */,
 				C68ABCE52B56542D002AE876 /* Products */,
 				C68ABD122B565449002AE876 /* Frameworks */,
 			);
@@ -68,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				C68ABCE42B56542D002AE876 /* passgen.app */,
+				E89CF22F2F49E37300DA5FF9 /* passgenTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,6 +184,29 @@
 			productReference = C68ABCE42B56542D002AE876 /* passgen.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E89CF22E2F49E37300DA5FF9 /* passgenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E89CF2352F49E37300DA5FF9 /* Build configuration list for PBXNativeTarget "passgenTests" */;
+			buildPhases = (
+				E89CF22B2F49E37300DA5FF9 /* Sources */,
+				E89CF22C2F49E37300DA5FF9 /* Frameworks */,
+				E89CF22D2F49E37300DA5FF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E89CF2342F49E37300DA5FF9 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E89CF2302F49E37300DA5FF9 /* passgenTests */,
+			);
+			name = passgenTests;
+			packageProductDependencies = (
+			);
+			productName = passgenTests;
+			productReference = E89CF22F2F49E37300DA5FF9 /* passgenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -167,11 +214,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
+				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					C68ABCE32B56542D002AE876 = {
 						CreatedOnToolsVersion = 15.2;
+					};
+					E89CF22E2F49E37300DA5FF9 = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = C68ABCE32B56542D002AE876;
 					};
 				};
 			};
@@ -191,6 +242,7 @@
 			projectRoot = "";
 			targets = (
 				C68ABCE32B56542D002AE876 /* passgen */,
+				E89CF22E2F49E37300DA5FF9 /* passgenTests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +254,13 @@
 			files = (
 				C68ABCEF2B56542F002AE876 /* Preview Assets.xcassets in Resources */,
 				C68ABCEC2B56542F002AE876 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E89CF22D2F49E37300DA5FF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +283,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E89CF22B2F49E37300DA5FF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E89CF2342F49E37300DA5FF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C68ABCE32B56542D002AE876 /* passgen */;
+			targetProxy = E89CF2332F49E37300DA5FF9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C68ABD062B56542F002AE876 /* Debug */ = {
@@ -416,6 +490,48 @@
 			};
 			name = Release;
 		};
+		E89CF2362F49E37300DA5FF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = theisegeberg.passphrasegenerator.passgenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/passgen.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/passgen";
+			};
+			name = Debug;
+		};
+		E89CF2372F49E37300DA5FF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = theisegeberg.passphrasegenerator.passgenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/passgen.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/passgen";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -433,6 +549,15 @@
 			buildConfigurations = (
 				C68ABD092B56542F002AE876 /* Debug */,
 				C68ABD0A2B56542F002AE876 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E89CF2352F49E37300DA5FF9 /* Build configuration list for PBXNativeTarget "passgenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E89CF2362F49E37300DA5FF9 /* Debug */,
+				E89CF2372F49E37300DA5FF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
