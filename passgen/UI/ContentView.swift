@@ -32,6 +32,8 @@ struct ContentView: View {
             guard !Task.isCancelled else { return }
             await MainActor.run {
                 withAnimation {
+                    // I would read this as it favours hand and finger ease based on the scoring sorting
+                    // Maybe worth mentioning in the UI they are intentionally biased for typing ease so not to mislead the user
                     self.passwords = scoredPasswords.suffix(5)
                 }
             }
