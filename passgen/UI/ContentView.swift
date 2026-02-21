@@ -112,3 +112,7 @@ struct ContentView: View {
         return floor(log2(Double(listCount)) * Double(wordCount))
     }
 }
+
+#Preview {
+    ContentView()
+}
