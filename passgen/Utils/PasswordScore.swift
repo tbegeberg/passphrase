@@ -184,7 +184,9 @@ public struct DoubleLettersScore: StringScore {
         guard doubles <= 1 else {
             return 0
         }
+        // Question: How can it ever be smaller than one?
         guard doubles <= 0 else {
+            // Question: Why `0.01`?
             return 0.01
         }
         return 1
