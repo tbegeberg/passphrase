@@ -51,6 +51,7 @@ EXCLUDE_PATHS=(
   "./README.md"
   "./passgen.xcodeproj/xcuserdata/*"
   "./passgen.xcodeproj/project.xcworkspace/xcshareddata/*"
+  # question: Couldn't this be a problem, since a info plist could contain network permissions and URL
   "./passgen/Info.plist"
 )
 
