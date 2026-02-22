@@ -13,4 +13,8 @@ struct PasswordTests {
     @Test func testEntropy() async throws {
         // Test entropyBits(forWordCount:fromList:) for known values
     }
+    
+    @Test func testScores() async throws {
+        // Test scores production is the same based on input and expectation
+    }
 }
