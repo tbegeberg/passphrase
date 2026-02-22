@@ -24,26 +24,40 @@ extension String {
     static let left = leftIndex + leftMiddle + leftRing + leftPinky
     static let right = rightIndex + rightMiddle + rightRing + rightPinky
 
-    static func hand(forCharacter char: Character) -> String {
-        if left.contains(char.baseCharacter) {
-            return left
-        }
-        if right.contains(char.baseCharacter) {
-            return right
-        }
-        return right
+    // Added Hand and Finger enum to make loops compare enums instead of strings
+    enum Hand {
+        case left
+        case right
     }
 
-    static func finger(forCharacter char: Character) -> String {
-        if leftIndex.contains(char.baseCharacter) { return leftIndex }
-        if leftMiddle.contains(char.baseCharacter) { return leftMiddle }
-        if leftRing.contains(char.baseCharacter) { return leftRing }
-        if leftPinky.contains(char.baseCharacter) { return leftPinky }
+    enum Finger {
+        case leftIndex
+        case leftMiddle
+        case leftRing
+        case leftPinky
+        case rightIndex
+        case rightMiddle
+        case rightRing
+        case rightPinky
+    }
 
-        if rightIndex.contains(char.baseCharacter) { return rightIndex }
-        if rightMiddle.contains(char.baseCharacter) { return rightMiddle }
-        if rightRing.contains(char.baseCharacter) { return rightRing }
-        if rightPinky.contains(char.baseCharacter) { return rightPinky }
+    static func hand(forCharacter char: Character) -> Hand {
+        if left.contains(char.baseCharacter) {
+            return .left
+        }
+        return .right
+    }
+
+    static func finger(forCharacter char: Character) -> Finger {
+        if leftIndex.contains(char.baseCharacter) { return .leftIndex }
+        if leftMiddle.contains(char.baseCharacter) { return .leftMiddle }
+        if leftRing.contains(char.baseCharacter) { return .leftRing }
+        if leftPinky.contains(char.baseCharacter) { return .leftPinky }
+
+        if rightIndex.contains(char.baseCharacter) { return .rightIndex }
+        if rightMiddle.contains(char.baseCharacter) { return .rightMiddle }
+        if rightRing.contains(char.baseCharacter) { return .rightRing }
+        if rightPinky.contains(char.baseCharacter) { return .rightPinky }
         fatalError()
     }
 }
