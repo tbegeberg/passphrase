@@ -67,6 +67,7 @@ public struct SimilarCharsOneApart: StringScore {
     public func getScore<T: StringProtocol>(_ string: T) -> Double {
         guard string.count > 2 else { return 1 }
         var similars = 0
+        // Question: What dos tests represent here?
         var tests = 0
         var prevPrevChar: Character? = nil
         var prevChar: Character? = nil
